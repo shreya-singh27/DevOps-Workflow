@@ -12,24 +12,27 @@ simulating a real-world DevOps pipeline that ensures faster, reliable, and repea
 - Defined **Kubernetes manifests** for deployment and services.
 - Verified application running inside Kubernetes via browser access.
 
-## Project Structure
+## Folder Structure
 
 DevOps-Workflow/
 
-- **app/**
-  - app.py
-  - requirements.txt
-
 - **ansible/**
+  - templates/
+    - deployment.yaml.j2
   - hosts
   - playbook.yml
 
-- **docker/**
+- **app/**
   - Dockerfile
+  - app.py
+  - requirements.txt
+
+- **jenkins/**
+  - Jenkinsfile
 
 - **k8s/**
-  - deployment.yaml
-  - service.yaml
+  - flask-deployment.yaml
+  - flask-service.yaml
 
 ## How It Works
 
