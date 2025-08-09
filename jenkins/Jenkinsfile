@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    environment {
+        IMAGE = "myapp:${GIT_COMMIT}"
+    }
+    stages {
+        stage('Checkout') {
+            steps { checkout scm }
+        }
+        stage('Build') {
+            steps {
+                dir('app') {
+                    sh 'docker build -t ${IMAGE} .'
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'ansible-playbook -i ansible/hosts ansible/playbook.yml --extra-vars "image=${IMAGE}"'
+            }
+        }
+    }
+}
