@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: myapp:latest
+        image: myapp:latest  # In CI/CD, replaced dynamically by Jenkins as myapp:${GIT_COMMIT}  
         ports:
         - containerPort: 5000
 
