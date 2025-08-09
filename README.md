@@ -46,7 +46,7 @@ Below are the actual screenshots captured during the process, showing each impor
 
 | Screenshot | Description |
 |------------|-------------|
-| ![Pods and Services](screenshots/01.k8s-pods-and-services.png) | Kubernetes Pods and Services — Shows running pods and services created by the manifests. |
+| ![Pods and Services](screenshots/01.k8s-pods-and-services.png) | Kubernetes Pods and Services — Shows running pods and services. |
 | ![Flask App Running](screenshots/02.flask-app-running.png) | Browser output confirming the Flask app is running inside Kubernetes. |
 
 ## Conclusion
